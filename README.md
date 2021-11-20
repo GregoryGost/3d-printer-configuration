@@ -1,2 +1,9 @@
-# 3D_Printer_configuration
- Configurations for 3D printer
+# 3D Printer configurations
+
+## RU
+
+Конфигурации для 3D принтеров
+
+## EN
+
+Configurations for 3D printers

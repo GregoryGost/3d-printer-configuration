@@ -1,0 +1,34 @@
+####################################################
+# Base ignore file
+# Marlin source code not included !!!
+####################################################
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/.github
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/.pio
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/buildroot
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/config
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/docker
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/docs
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/ini
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/lib
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/src
+!Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/Configuration.h
+!Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/Configuration_adv.h
+!Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/_Bootscreen.h
+!Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/_Statusscreen.h
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/Makefile
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/Marlin.ino
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Marlin/Version.h
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/.editorconfig
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/.gitattributes
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/.gitignore
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/docker-compose.yml
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/get_test_targets.py
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/LICENSE
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/Makefile
+!Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/platformio.ini
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/process-palette.json
+Ender 3 Pro/BTT_SKR_MINI_E3_V2.0/Marlin-2.0.*/README.md
+
+####################################################
+# Include config
+####################################################
