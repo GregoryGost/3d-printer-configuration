@@ -17,8 +17,6 @@
 * Немного устарело, но объяснение базовых опций хорошее <Дмитрий Соркин>: [Конфигурация и установка прошивки Marlin 1.1.9](https://www.youtube.com/watch?v=pSBb9GLrM1s)
 * Настройка BLTouch <Сергей Ирбис>: [Настройка Bltouch на Creality Ender-3 с платой SKR E3 DIP](https://www.youtube.com/watch?v=ELIY_ZwpuRs)
 * Настройка BLTouch <Дмитрий Соркин>: [BLTouch. Стоит ли покупать? Установка, прошивка, калибровка. На примере Tevo Tornado](https://www.youtube.com/watch?v=oJgKQKbN8nE)
-* Статья на 3D Today по Auto Bed Leveling UBL(): [UBL ...или как получить идеальный первый слой](https://3dtoday.ru/blogs/otumanov/ubl-or-how-to-get-a-perfect-first-layer)
-* [github.com/jonwest/ender3-marlin](https://github.com/jonwest/ender3-marlin/tree/main/Marlin)
 
 ### Конфигурации
 
