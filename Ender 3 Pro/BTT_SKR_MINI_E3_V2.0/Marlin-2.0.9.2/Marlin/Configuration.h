@@ -489,7 +489,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1 // For direct E3DV6 KIT (termistor HT-NTC100K) https://aliexpress.ru/item/32890376072.html
+#define TEMP_SENSOR_0 61 // For direct E3DV6 (termistor HT-NTC100K) https://aliexpress.ru/item/32827784267.html
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -1037,7 +1037,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-// #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1375,17 +1375,27 @@
 
 // @section machine
 
-// The size of the printable area
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+// Offsets for GregoryGost E3BMGS Extruder mount
+#define E3BMGSV1
+#if ENABLED(E3BMGSV1)
+  #define E3BMGS_X_OFFSET -10
+  #define E3BMGS_Y_OFFSET -19
+#else
+  #define E3BMGS_X_OFFSET 0
+  #define E3BMGS_Y_OFFSET 0
+#endif
 
-// Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -10 // For E3BMGS - Крепление директ BMG(clone) + E3DV6 экструдера
-#define Y_MIN_POS 0
+// The size of the printable area
+#define X_BED_SIZE (235 + E3BMGS_X_OFFSET)
+#define Y_BED_SIZE (235 + E3BMGS_Y_OFFSET)
+
+// Travel limits (mm) after homing, corresponding to endstop positions.  
+#define X_MIN_POS E3BMGS_X_OFFSET
+#define Y_MIN_POS E3BMGS_Y_OFFSET
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 250
+#define Z_MAX_POS 230
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1407,7 +1417,7 @@
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
-  #define MIN_SOFTWARE_ENDSTOP_Z
+  //#define MIN_SOFTWARE_ENDSTOP_Z
   #define MIN_SOFTWARE_ENDSTOP_I
   #define MIN_SOFTWARE_ENDSTOP_J
   #define MIN_SOFTWARE_ENDSTOP_K
@@ -1626,7 +1636,7 @@
     // Experimental Subdivision of the grid by Catmull-Rom method.
     // Synthesizes intermediate points to produce a more detailed mesh.
     //
-    //#define ABL_BILINEAR_SUBDIVISION
+    #define ABL_BILINEAR_SUBDIVISION
     #if ENABLED(ABL_BILINEAR_SUBDIVISION)
       // Number of subdivisions between probe points
       #define BILINEAR_SUBDIVISIONS 3
