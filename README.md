@@ -1,8 +1,6 @@
-# 3D Printer configurations
+# Конфигурации прошивок
 
-## RU
-
-Конфигурация для 3D принтера **Ender 3 Pro** с апгрейдами:
+Здесь собраны конфигурации для 3D принтера **Ender 3 Pro**:
 
 * Плата **BigTreeTech SKR Mini E3 2.0**
 * Экструдер **BMG clone**
@@ -18,12 +16,13 @@
 * Настройка BLTouch <Сергей Ирбис>: [Настройка Bltouch на Creality Ender-3 с платой SKR E3 DIP](https://www.youtube.com/watch?v=ELIY_ZwpuRs)
 * Настройка BLTouch <Дмитрий Соркин>: [BLTouch. Стоит ли покупать? Установка, прошивка, калибровка. На примере Tevo Tornado](https://www.youtube.com/watch?v=oJgKQKbN8nE)
 
-### Конфигурации
+## Калибровка
 
-* [20.11.2021] Конфигурация Марлин `2.0.9.2` для Direct BMG с двигателем **STEPPERONLINE NEMA 17** 20mm [17HS08-1004S](https://aliexpress.ru/item/32585429251.html)
+Информация по калибровке принтера: [CALIBRATION.md](./CALIBRATION.md)
 
-## EN
+## Конфигурации
 
-Configurations for 3D printers
-
-* [20.11.2021] Configuration Marlin `2.0.9.2` for Direct BMG with **STEPPERONLINE NEMA 17** motor 20mm [17HS08-1004S](https://aliexpress.ru/item/32585429251.html)
+* [27.12.2021] Конфигурация Марлин `2.0.9.2` для Direct BMG с двигателем **STEPPERONLINE NEMA 17** 20mm [17HS08-1004S](https://aliexpress.ru/item/32585429251.html)
+* [12.10.2020] (архив) Конфигурация Марлин `2.0.7.1` **BigTreeTech SKR Mini E3 2.0** с базовым экструдером переделанным под Direct.
+* [22.09.2020] (архив) Конфигурация Марлин `2.0.6.1` **BigTreeTech SKR Mini E3 2.0** с базовым экструдером переделанным под Direct.
+* [19.09.2020] (архив) Конфигурация Марлин `1.1.9.1` для стоковой платы Ender 3 Pro **Creality** с базовым экструдером Bouden.
