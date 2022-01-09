@@ -29,7 +29,7 @@ M303 E-1 S80 C8 U
 M500
 ```
 
-(2) Калибровка шагов/разрешения экструдера
+### 2. Калибровка шагов/разрешения экструдера
 
 ```gcode
 ;Turn on the extruder without heating
@@ -63,7 +63,11 @@ M500
 Пример:  
 OS=460, RL=100, FL=112, NS=460*(100/112)=410.7
 
-(3) Калибровка ускорений и рывков
+### 3. Калибровка потока
+
+Использовался метод калибровки из видео: [Калибровка экструдера и потока 3D принтера](https://www.youtube.com/watch?v=Mga_ezYDTNI)
+
+### 4. Калибровка ускорений и рывков
 
 Использовался метод калибровки из видео: [Калибровка ускорений и рывков 3D принтера](https://www.youtube.com/watch?v=t5dJHWF-RGo)
 
@@ -74,28 +78,28 @@ PrusaSlicer-2.3.3 (Макрос ускорения)
 ```gcode
 {if layer_z == 0.3}
 M900 K0 ; Disable Linear Advance
-M201 X1700 Y1700 ; Max Acceleration
-M204 P1000 T1600 ; Print 1000, Travel 1600
-M205 J0.01 ; Junction Deviation Max 0.2
-{elsif layer_z == 4.90}M205 J0.02
-{elsif layer_z == 9.90}M205 J0.03
-{elsif layer_z == 14.90}M205 J0.04
-{elsif layer_z == 19.90}M205 J0.05
-{elsif layer_z == 24.90}M205 J0.06
-{elsif layer_z == 29.90}M205 J0.07
-{elsif layer_z == 34.90}M205 J0.08
-{elsif layer_z == 39.90}M205 J0.09
-{elsif layer_z == 44.90}M205 J0.1
-{elsif layer_z == 49.90}M205 J0.11
-{elsif layer_z == 54.90}M205 J0.12
-{elsif layer_z == 59.90}M205 J0.13
-{elsif layer_z == 64.90}M205 J0.14
-{elsif layer_z == 69.90}M205 J0.15
-{elsif layer_z == 74.90}M205 J0.16
-{elsif layer_z == 79.90}M205 J0.17
-{elsif layer_z == 84.90}M205 J0.18
-{elsif layer_z == 89.90}M205 J0.19
-{elsif layer_z == 94.90}M205 J0.2
+M201 X5000 Y5000 ; No limit Max Acceleration
+M205 J0.04 ; Fix Junction Deviation
+M204 P500 T500 ; Print 500, Travel 500
+{elsif layer_z == 4.90}M204 P600 T600
+{elsif layer_z == 9.90}M204 P700 T700
+{elsif layer_z == 14.90}M204 P800 T800
+{elsif layer_z == 19.90}M204 P900 T900
+{elsif layer_z == 24.90}M204 P1000 T1000
+{elsif layer_z == 29.90}M204 P1100 T1100
+{elsif layer_z == 34.90}M204 P1200 T1200
+{elsif layer_z == 39.90}M204 P1300 T1300
+{elsif layer_z == 44.90}M204 P1400 T1400
+{elsif layer_z == 49.90}M204 P1500 T1500
+{elsif layer_z == 54.90}M204 P1600 T1600
+{elsif layer_z == 59.90}M204 P1700 T1700
+{elsif layer_z == 64.90}M204 P1800 T1800
+{elsif layer_z == 69.90}M204 P1900 T1900
+{elsif layer_z == 74.90}M204 P2000 T2000
+{elsif layer_z == 79.90}M204 P2100 T2100
+{elsif layer_z == 84.90}M204 P2200 T2200
+{elsif layer_z == 89.90}M204 P2300 T2300
+{elsif layer_z == 94.90}M204 P2400 T2400
 {endif}
 ```
 
@@ -129,26 +133,22 @@ M205 J0.01 ; Junction Deviation Max 0.2
 {endif}
 ```
 
-(4) Калибровка **Linear Pressure Control v1.5** (LIN_ADVANCE)
+### 5. Калибровка **Linear Pressure Control v1.5** (LIN_ADVANCE)
 
 Для калибровки использовался [Kcalibrator](https://github.com/ArtificalSUN/Kcalibrator)  
 Видео по использованию: [Kcalibrator - Альтернативная калибровка Linear Advance (Pressure Advance)](https://www.youtube.com/watch?v=p9IKwwKTIFM)
 
-Стартовый GCODE
+Стартовый GCODE PrusaSlicer
 
 ```gcode
 M900 K{if filament_type[0]=~/PETG/}0.07{else}0{endif}
 ```
 
-(5) Калибровка потока
-
-Использовался метод калибровки из видео: [Калибровка экструдера и потока 3D принтера](https://www.youtube.com/watch?v=Mga_ezYDTNI)
-
-(6) Калибровка температуры и ретракта для различных пластиков
+### 6. Калибровка температуры и ретракта для различных пластиков
 
 Калибровочная температурная башня для PETG: [Temperature Tower 230-250](https://www.thingiverse.com/thing:4642743/files)
 
-Использовался метод калибровки из видео: [Делаем откаты удобными - Firmware retraction](https://youtu.be/30Kh-LyFH2w?t=678)
+Использовался метод калибровки Firmware Retract из видео: [Делаем откаты удобными - Firmware retraction](https://youtu.be/30Kh-LyFH2w?t=678)
 
 PrusaSlicer-2.3.3 (Макрос скорость ретракта). Высота башен 60мм  
 Первый слой 0.3мм
@@ -189,3 +189,5 @@ PrusaSlicer-2.3.3 (Макрос длина ретракта). Высота ба�
 {elsif layer_z==75.10}M207 S4 F{25*60} ; 25mm/s
 {endif}
 ```
+
+Также использовалась калибровочная башня из генератора: [github.com/GregoryGost/Retractor](https://github.com/GregoryGost/Retractor)
