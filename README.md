@@ -21,9 +21,9 @@
 * Настройка BLTouch <Сергей Ирбис>: [Настройка Bltouch на Creality Ender-3 с платой SKR E3 DIP](https://www.youtube.com/watch?v=ELIY_ZwpuRs)
 * Настройка BLTouch <Дмитрий Соркин>: [BLTouch. Стоит ли покупать? Установка, прошивка, калибровка. На примере Tevo Tornado](https://www.youtube.com/watch?v=oJgKQKbN8nE)
 
-#### Калибровка
+#### Калибровка в Marlin
 
-Информация по калибровке принтера: [CALIBRATION.md](./CALIBRATION.md)
+Информация по калибровке принтера для Marlin 2: [CALIBRATION_MARLIN.md](./CALIBRATION_MARLIN.md) (устарело, но может быть полезным местами)
 
 #### Конфигурации
 
@@ -41,3 +41,7 @@
 Далее уже ставился Klipper через [Klipper Installation And Update Helper - KIAUH](https://github.com/dw-0/kiauh)
 
 Калибровки использовались из материалов на <https://k3d.tech/calibrations/vfa/>
+
+#### Калибровка в Klipper
+
+Информация по калибровке принтера для Klipper: [CALIBRATION_KLIPPER.md](./CALIBRATION_KLIPPER.md)
